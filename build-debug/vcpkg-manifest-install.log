@@ -1,0 +1,237 @@
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+Detecting compiler hash for triplet x64-mingw-dynamic...
+Compiler found: C:/msys64/ucrt64/bin/x86_64-w64-mingw32-g++.exe
+The following packages will be built and installed:
+  * cgltf:x64-mingw-dynamic@1.14
+  * dirent:x64-mingw-dynamic@1.26
+  * drlibs:x64-mingw-dynamic@2023-08-16
+  * glfw3:x64-mingw-dynamic@3.4#1
+  * miniaudio:x64-mingw-dynamic@0.11.22
+  * mmx:x64-mingw-dynamic@2022-03-27
+  * nanosvg:x64-mingw-dynamic@2023-12-29
+  * qoi:x64-mingw-dynamic@2023-08-10
+    raylib[core,use-audio]:x64-mingw-dynamic@5.5
+  * stb:x64-mingw-dynamic@2024-07-29#1
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from C:\Users\Artur\AppData\Local\vcpkg\archives in 346 us. Use --debug to see more details.
+Installing 1/12 vcpkg-cmake-config:x64-windows@2024-05-23...
+Building vcpkg-cmake-config:x64-windows@2024-05-23...
+-- Installing: C:/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/copyright
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Starting submission of vcpkg-cmake-config:x64-windows@2024-05-23 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 54.6 ms
+vcpkg-cmake-config:x64-windows package ABI: bf0b200fc6b7450a8ebcb7bee29090a43f4f2bc7a6e8ed0eda2db574fc3c1843
+Installing 2/12 vcpkg-cmake:x64-windows@2024-04-23...
+Building vcpkg-cmake:x64-windows@2024-04-23...
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg-port-config.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/copyright
+-- Performing post-build validation
+Starting submission of vcpkg-cmake:x64-windows@2024-04-23 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake:x64-windows: 120 ms
+vcpkg-cmake:x64-windows package ABI: 57c6400951d4a4a5076f575d4210c1864717f48d3953435e25b60fe84afc853f
+Completed submission of vcpkg-cmake-config:x64-windows@2024-05-23 to 1 binary cache(s) in 42.3 ms
+Installing 3/12 stb:x64-mingw-dynamic@2024-07-29#1...
+Building stb:x64-mingw-dynamic@2024-07-29#1...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached nothings-stb-f75e8d1cad7d90d72ef7a4661f1b994ef78b4e31.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/stb/src/4ef78b4e31-bf024d35de.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/nothings-stb-f75e8d1cad7d90d72ef7a4661f1b994ef78b4e31.tar.gz
+-- Using source at C:/vcpkg/buildtrees/stb/src/4ef78b4e31-bf024d35de.clean
+-- Installing: C:/vcpkg/packages/stb_x64-mingw-dynamic/share/stb/FindStb.cmake
+-- Installing: C:/vcpkg/packages/stb_x64-mingw-dynamic/share/stb/vcpkg-cmake-wrapper.cmake
+-- Installing: C:/vcpkg/packages/stb_x64-mingw-dynamic/share/stb/usage
+-- Installing: C:/vcpkg/packages/stb_x64-mingw-dynamic/share/stb/copyright
+-- Performing post-build validation
+Starting submission of stb:x64-mingw-dynamic@2024-07-29#1 to 1 binary cache(s) in the background
+Elapsed time to handle stb:x64-mingw-dynamic: 779 ms
+stb:x64-mingw-dynamic package ABI: a9bddeeb7b3dbd785cc4178155d962b36ff60dbd8dd8bed57cd82db33ce34c71
+Completed submission of vcpkg-cmake:x64-windows@2024-04-23 to 1 binary cache(s) in 38.3 ms
+Installing 4/12 qoi:x64-mingw-dynamic@2023-08-10...
+Building qoi:x64-mingw-dynamic@2023-08-10...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached phoboslab-qoi-19b3b4087b66963a3699ee45f05ec9ef205d7c0e.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/qoi/src/ef205d7c0e-98fb9778bd.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/phoboslab-qoi-19b3b4087b66963a3699ee45f05ec9ef205d7c0e.tar.gz
+-- Using source at C:/vcpkg/buildtrees/qoi/src/ef205d7c0e-98fb9778bd.clean
+-- Installing: C:/vcpkg/packages/qoi_x64-mingw-dynamic/include/qoi.h
+-- Installing: C:/vcpkg/packages/qoi_x64-mingw-dynamic/share/qoi/copyright
+-- Performing post-build validation
+Starting submission of qoi:x64-mingw-dynamic@2023-08-10 to 1 binary cache(s) in the background
+Elapsed time to handle qoi:x64-mingw-dynamic: 238 ms
+qoi:x64-mingw-dynamic package ABI: e726608d1ab84899e4b8e1c7a2191475ed1f366b3f1a42f1e92aa31491493743
+Completed submission of stb:x64-mingw-dynamic@2024-07-29#1 to 1 binary cache(s) in 95.1 ms
+Installing 5/12 nanosvg:x64-mingw-dynamic@2023-12-29...
+Building nanosvg:x64-mingw-dynamic@2023-12-29...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Note: nanosvg only supports static library linkage. Building static library.
+-- Using cached memononen-nanosvg-93ce879dc4c04a3ef1758428ec80083c38610b1f.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/nanosvg/src/3c38610b1f-dc4edc4939.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/memononen-nanosvg-93ce879dc4c04a3ef1758428ec80083c38610b1f.tar.gz
+-- Applying patch fltk.patch
+-- Using source at C:/vcpkg/buildtrees/nanosvg/src/3c38610b1f-dc4edc4939.clean
+-- Found external ninja('1.13.1').
+-- Configuring x64-mingw-dynamic
+-- Building x64-mingw-dynamic-dbg
+-- Building x64-mingw-dynamic-rel
+-- Installing: C:/vcpkg/packages/nanosvg_x64-mingw-dynamic/share/nanosvg/copyright
+-- Performing post-build validation
+Starting submission of nanosvg:x64-mingw-dynamic@2023-12-29 to 1 binary cache(s) in the background
+Elapsed time to handle nanosvg:x64-mingw-dynamic: 6.3 s
+nanosvg:x64-mingw-dynamic package ABI: 1c3a399c376647309ee7d641db39625a2a70992fc07efb0c8579032848bbb752
+Completed submission of qoi:x64-mingw-dynamic@2023-08-10 to 1 binary cache(s) in 36 ms
+Installing 6/12 mmx:x64-mingw-dynamic@2022-03-27...
+Building mmx:x64-mingw-dynamic@2022-03-27...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached vurtun-mmx-71382a1d14dad58219e7f6634d2381fa30dab175.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/mmx/src/fa30dab175-b5e72cb935.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/vurtun-mmx-71382a1d14dad58219e7f6634d2381fa30dab175.tar.gz
+-- Using source at C:/vcpkg/buildtrees/mmx/src/fa30dab175-b5e72cb935.clean
+-- Installing: C:/vcpkg/packages/mmx_x64-mingw-dynamic/include/mmx/json.h
+-- Installing: C:/vcpkg/packages/mmx_x64-mingw-dynamic/include/mmx/sched.h
+-- Installing: C:/vcpkg/packages/mmx_x64-mingw-dynamic/include/mmx/sdefl.h
+-- Installing: C:/vcpkg/packages/mmx_x64-mingw-dynamic/include/mmx/sinfl.h
+-- Installing: C:/vcpkg/packages/mmx_x64-mingw-dynamic/include/mmx/web.h
+-- Installing: C:/vcpkg/packages/mmx_x64-mingw-dynamic/share/mmx/copyright
+-- Performing post-build validation
+Starting submission of mmx:x64-mingw-dynamic@2022-03-27 to 1 binary cache(s) in the background
+Elapsed time to handle mmx:x64-mingw-dynamic: 234 ms
+mmx:x64-mingw-dynamic package ABI: 3002ee571185cd268d253aa11bfa012752b60c277c9c99084c14c455a894512e
+Completed submission of nanosvg:x64-mingw-dynamic@2023-12-29 to 1 binary cache(s) in 51.5 ms
+Installing 7/12 miniaudio:x64-mingw-dynamic@0.11.22...
+Building miniaudio:x64-mingw-dynamic@0.11.22...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached mackron-miniaudio-0.11.22.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/miniaudio/src/0.11.22-72ab6761dd.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/mackron-miniaudio-0.11.22.tar.gz
+-- Using source at C:/vcpkg/buildtrees/miniaudio/src/0.11.22-72ab6761dd.clean
+-- Installing: C:/vcpkg/packages/miniaudio_x64-mingw-dynamic/include/miniaudio.h
+-- Installing: C:/vcpkg/packages/miniaudio_x64-mingw-dynamic/share/miniaudio/copyright
+-- Performing post-build validation
+Starting submission of miniaudio:x64-mingw-dynamic@0.11.22 to 1 binary cache(s) in the background
+Elapsed time to handle miniaudio:x64-mingw-dynamic: 1.3 s
+miniaudio:x64-mingw-dynamic package ABI: cda773afa798039b6dfc950ef3145d65c53b2a8c1220a4e3d75e460463bbed46
+Completed submission of mmx:x64-mingw-dynamic@2022-03-27 to 1 binary cache(s) in 42.8 ms
+Installing 8/12 glfw3:x64-mingw-dynamic@3.4#1...
+Building glfw3:x64-mingw-dynamic@3.4#1...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached glfw-glfw-3.4.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/glfw3/src/3.4-2448ff4533.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/glfw-glfw-3.4.tar.gz
+-- Using source at C:/vcpkg/buildtrees/glfw3/src/3.4-2448ff4533.clean
+-- Found external ninja('1.13.1').
+-- Configuring x64-mingw-dynamic
+-- Building x64-mingw-dynamic-dbg
+-- Building x64-mingw-dynamic-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/glfw3_x64-mingw-dynamic/lib/pkgconfig/glfw3.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/vcpkg/packages/glfw3_x64-mingw-dynamic/debug/lib/pkgconfig/glfw3.pc
+-- Installing: C:/vcpkg/packages/glfw3_x64-mingw-dynamic/share/glfw3/copyright
+-- Performing post-build validation
+Starting submission of glfw3:x64-mingw-dynamic@3.4#1 to 1 binary cache(s) in the background
+Elapsed time to handle glfw3:x64-mingw-dynamic: 19 s
+glfw3:x64-mingw-dynamic package ABI: 7465ae1d330c06dfec96f0a99d60fb5b11e7b86ee2e7bbcfea8198972294a0db
+Completed submission of miniaudio:x64-mingw-dynamic@0.11.22 to 1 binary cache(s) in 458 ms
+Installing 9/12 drlibs:x64-mingw-dynamic@2023-08-16...
+Building drlibs:x64-mingw-dynamic@2023-08-16...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached mackron-dr_libs-d35a3bc5efd02455d98cbe12b94647136f09b42d.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/drlibs/src/136f09b42d-cbba59f685.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/mackron-dr_libs-d35a3bc5efd02455d98cbe12b94647136f09b42d.tar.gz
+-- Using source at C:/vcpkg/buildtrees/drlibs/src/136f09b42d-cbba59f685.clean
+-- Installing: C:/vcpkg/packages/drlibs_x64-mingw-dynamic/share/drlibs/copyright
+-- Performing post-build validation
+Starting submission of drlibs:x64-mingw-dynamic@2023-08-16 to 1 binary cache(s) in the background
+Elapsed time to handle drlibs:x64-mingw-dynamic: 2.9 s
+drlibs:x64-mingw-dynamic package ABI: 82ed1529b30d7fea6594e9d293134874c081179804457a459f6d556f9d1049ff
+Completed submission of glfw3:x64-mingw-dynamic@3.4#1 to 1 binary cache(s) in 153 ms
+Installing 10/12 dirent:x64-mingw-dynamic@1.26...
+Building dirent:x64-mingw-dynamic@1.26...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Starting submission of dirent:x64-mingw-dynamic@1.26 to 1 binary cache(s) in the background
+Elapsed time to handle dirent:x64-mingw-dynamic: 68 ms
+dirent:x64-mingw-dynamic package ABI: ea2fbaaca6c9499d9303defc2bdd4de32e654a9a85190af6593ed130ae8620a5
+Installing 11/12 cgltf:x64-mingw-dynamic@1.14...
+Building cgltf:x64-mingw-dynamic@1.14...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached jkuhlmann-cgltf-v1.14.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/cgltf/src/v1.14-7cf8b4171b.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/jkuhlmann-cgltf-v1.14.tar.gz
+-- Using source at C:/vcpkg/buildtrees/cgltf/src/v1.14-7cf8b4171b.clean
+-- Installing: C:/vcpkg/packages/cgltf_x64-mingw-dynamic/share/cgltf/copyright
+-- Performing post-build validation
+Starting submission of cgltf:x64-mingw-dynamic@1.14 to 1 binary cache(s) in the background
+Elapsed time to handle cgltf:x64-mingw-dynamic: 427 ms
+cgltf:x64-mingw-dynamic package ABI: e398947e45c8bfa7c920f1d287f86f613364f67109d7878926d9c414573d4094
+Completed submission of drlibs:x64-mingw-dynamic@2023-08-16 to 1 binary cache(s) in 106 ms
+Completed submission of dirent:x64-mingw-dynamic@1.26 to 1 binary cache(s) in 32.1 ms
+Installing 12/12 raylib[core,use-audio]:x64-mingw-dynamic@5.5...
+Building raylib[core,use-audio]:x64-mingw-dynamic@5.5...
+C:\vcpkg\triplets\community\x64-mingw-dynamic.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Using cached raysan5-raylib-5.5.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/raylib/src/5.5-966575b391.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/raysan5-raylib-5.5.tar.gz
+-- Applying patch android.diff
+-- Applying patch fix-link-path.patch
+-- Using source at C:/vcpkg/buildtrees/raylib/src/5.5-966575b391.clean
+-- De-vendoring 'cgltf.h'
+-- De-vendoring 'dr_flac.h'
+-- De-vendoring 'dr_mp3.h'
+-- De-vendoring 'dr_wav.h'
+-- De-vendoring 'miniaudio.h'
+-- De-vendoring 'qoi.h'
+-- De-vendoring 'sdefl.h'
+-- De-vendoring 'sinfl.h'
+-- De-vendoring 'stb_image.h'
+-- De-vendoring 'stb_image_resize2.h'
+-- De-vendoring 'stb_image_write.h'
+-- De-vendoring 'stb_perlin.h'
+-- De-vendoring 'stb_rect_pack.h'
+-- De-vendoring 'stb_truetype.h'
+-- De-vendoring 'stb_vorbis.c'
+-- Found external ninja('1.13.1').
+-- Configuring x64-mingw-dynamic
+-- Building x64-mingw-dynamic-dbg
+-- Building x64-mingw-dynamic-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/raylib_x64-mingw-dynamic/lib/pkgconfig/raylib.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/vcpkg/packages/raylib_x64-mingw-dynamic/debug/lib/pkgconfig/raylib.pc
+-- Installing: C:/vcpkg/packages/raylib_x64-mingw-dynamic/share/raylib/copyright
+-- Performing post-build validation
+Starting submission of raylib[core,use-audio]:x64-mingw-dynamic@5.5 to 1 binary cache(s) in the background
+Elapsed time to handle raylib:x64-mingw-dynamic: 1.1 min
+raylib:x64-mingw-dynamic package ABI: b5ce4613721785f3d19f40f7256637a1390f025e656b9f1e8d57f7d955dbb061
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(MIT OR CC-PDDC)
+(Unlicense OR MIT-0)
+MIT
+Zlib
+raylib provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(raylib CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE raylib)
+
+raylib provides pkg-config modules:
+
+  # A simple and easy-to-use library to enjoy videogames programming
+  raylib
+
+Completed submission of cgltf:x64-mingw-dynamic@1.14 to 1 binary cache(s) in 50.1 ms
+Waiting for 1 remaining binary cache submissions...
+Completed submission of raylib[core,use-audio]:x64-mingw-dynamic@5.5 to 1 binary cache(s) in 646 ms (1/1)
+All requested installations completed successfully in: 1.6 min
