@@ -1,0 +1,12 @@
+build/
+out/
+.vscode/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.exe
+*.dll
+*.pdb
+Thumbs.db
+Desktop.ini
