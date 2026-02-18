@@ -10,3 +10,6 @@ compile_commands.json
 *.pdb
 Thumbs.db
 Desktop.ini
+
+# vcpkg (manifest mode)
+vcpkg_installed/

@@ -1,0 +1,7 @@
+{
+  "name": "cpp-game",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "raylib"
+  ]
+}
