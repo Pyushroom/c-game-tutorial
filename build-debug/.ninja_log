@@ -1,3 +1,7 @@
 # ninja log v7
 4	93	7931491166242927	CMakeFiles/cpp_game.dir/src/main.cpp.obj	30fc7e51048cd8f9
 94	1038	7931491167222364	cpp_game.exe	f8569dedc9f0f35f
+2	4704	7938059943072836	build.ninja	9c967240e56f7c9b
+2	4704	7938059943072836	E:/c++ codes/c++ game project/build-debug/cmake_install.cmake	9c967240e56f7c9b
+6	199	7938059943783255	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+200	1718	7938059945575282	cpp_game.exe	f8569dedc9f0f35f
