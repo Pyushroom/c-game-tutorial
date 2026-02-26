@@ -1,5 +1,29 @@
 # ninja log v7
-6	199	7938059943783255	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
-200	1718	7938059945575282	cpp_game.exe	f8569dedc9f0f35f
-2	4704	7938217114286597	build.ninja	9c967240e56f7c9b
-2	4704	7938217114266596	E:/c++ codes/c++ game project/build-debug/cmake_install.cmake	9c967240e56f7c9b
+3	111	7938377680680825	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+19	132	7938377680892297	CMakeFiles/cpp_game.dir/src/laser.cpp.obj	7cf5ef355925c1a5
+8	135	7938377680680825	CMakeFiles/cpp_game.dir/src/Spaceship.cpp.obj	ffc5f410b447092c
+13	137	7938377680860525	CMakeFiles/cpp_game.dir/src/game.cpp.obj	6d904dd28e43c129
+138	1047	7938377682097546	cpp_game.exe	eb62e98d95eb41b1
+4	92	7938378008808623	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+93	864	7938378009695333	cpp_game.exe	eb62e98d95eb41b1
+4	104	7938378837391615	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+10	108	7938378837451701	CMakeFiles/cpp_game.dir/src/laser.cpp.obj	7cf5ef355925c1a5
+109	897	7938378838432829	cpp_game.exe	eb62e98d95eb41b1
+4	97	7938381686354774	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+10	880	7938381686412003	CMakeFiles/cpp_game.dir/src/laser.cpp.obj	7cf5ef355925c1a5
+882	1684	7938381695138576	cpp_game.exe	eb62e98d95eb41b1
+6	313	7938386146848961	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+17	315	7938386146958108	CMakeFiles/cpp_game.dir/src/game.cpp.obj	6d904dd28e43c129
+12	357	7938386146908043	CMakeFiles/cpp_game.dir/src/Spaceship.cpp.obj	ffc5f410b447092c
+358	1171	7938386150361617	cpp_game.exe	eb62e98d95eb41b1
+5	287	7938388492285763	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+16	302	7938388492395772	CMakeFiles/cpp_game.dir/src/game.cpp.obj	6d904dd28e43c129
+11	330	7938388492345762	CMakeFiles/cpp_game.dir/src/Spaceship.cpp.obj	ffc5f410b447092c
+332	1130	7938388495554070	cpp_game.exe	eb62e98d95eb41b1
+5	256	7938390627583294	CMakeFiles/cpp_game.dir/src/main.cpp.obj	3a5e595e8fb4b00b
+6	450	7938391370625768	CMakeFiles/cpp_game.dir/src/game.cpp.obj	6d904dd28e43c129
+451	1271	7938391375101159	cpp_game.exe	eb62e98d95eb41b1
+6	459	7938391929500053	CMakeFiles/cpp_game.dir/src/game.cpp.obj	6d904dd28e43c129
+459	1250	7938391934040991	cpp_game.exe	eb62e98d95eb41b1
+5	478	7938392636687323	CMakeFiles/cpp_game.dir/src/game.cpp.obj	6d904dd28e43c129
+479	1327	7938392641422232	cpp_game.exe	eb62e98d95eb41b1

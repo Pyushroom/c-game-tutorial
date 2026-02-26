@@ -2,7 +2,7 @@ Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
 Detecting compiler hash for triplet x64-mingw-dynamic...
 Compiler found: C:/msys64/ucrt64/bin/x86_64-w64-mingw32-g++.exe
-The following packages are already installed:
+The following packages will be built and installed:
   * cgltf:x64-mingw-dynamic@1.14
   * dirent:x64-mingw-dynamic@1.26
   * drlibs:x64-mingw-dynamic@2023-08-16
@@ -15,6 +15,51 @@ The following packages are already installed:
   * stb:x64-mingw-dynamic@2024-07-29#1
   * vcpkg-cmake:x64-windows@2024-04-23
   * vcpkg-cmake-config:x64-windows@2024-05-23
+Additional packages (*) will be modified to complete this operation.
+Restored 12 package(s) from C:\Users\Artur\AppData\Local\vcpkg\archives in 104 ms. Use --debug to see more details.
+Installing 1/12 vcpkg-cmake-config:x64-windows@2024-05-23...
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 10.3 ms
+vcpkg-cmake-config:x64-windows package ABI: bf0b200fc6b7450a8ebcb7bee29090a43f4f2bc7a6e8ed0eda2db574fc3c1843
+Installing 2/12 vcpkg-cmake:x64-windows@2024-04-23...
+Elapsed time to handle vcpkg-cmake:x64-windows: 7.63 ms
+vcpkg-cmake:x64-windows package ABI: 57c6400951d4a4a5076f575d4210c1864717f48d3953435e25b60fe84afc853f
+Installing 3/12 stb:x64-mingw-dynamic@2024-07-29#1...
+Elapsed time to handle stb:x64-mingw-dynamic: 15.1 ms
+stb:x64-mingw-dynamic package ABI: a9bddeeb7b3dbd785cc4178155d962b36ff60dbd8dd8bed57cd82db33ce34c71
+Installing 4/12 qoi:x64-mingw-dynamic@2023-08-10...
+Elapsed time to handle qoi:x64-mingw-dynamic: 6.97 ms
+qoi:x64-mingw-dynamic package ABI: e726608d1ab84899e4b8e1c7a2191475ed1f366b3f1a42f1e92aa31491493743
+Installing 5/12 nanosvg:x64-mingw-dynamic@2023-12-29...
+Elapsed time to handle nanosvg:x64-mingw-dynamic: 11.6 ms
+nanosvg:x64-mingw-dynamic package ABI: 1c3a399c376647309ee7d641db39625a2a70992fc07efb0c8579032848bbb752
+Installing 6/12 mmx:x64-mingw-dynamic@2022-03-27...
+Elapsed time to handle mmx:x64-mingw-dynamic: 8.23 ms
+mmx:x64-mingw-dynamic package ABI: 3002ee571185cd268d253aa11bfa012752b60c277c9c99084c14c455a894512e
+Installing 7/12 miniaudio:x64-mingw-dynamic@0.11.22...
+Elapsed time to handle miniaudio:x64-mingw-dynamic: 7.2 ms
+miniaudio:x64-mingw-dynamic package ABI: cda773afa798039b6dfc950ef3145d65c53b2a8c1220a4e3d75e460463bbed46
+Installing 8/12 glfw3:x64-mingw-dynamic@3.4#1...
+Elapsed time to handle glfw3:x64-mingw-dynamic: 14.3 ms
+glfw3:x64-mingw-dynamic package ABI: 7465ae1d330c06dfec96f0a99d60fb5b11e7b86ee2e7bbcfea8198972294a0db
+Installing 9/12 drlibs:x64-mingw-dynamic@2023-08-16...
+Elapsed time to handle drlibs:x64-mingw-dynamic: 8.7 ms
+drlibs:x64-mingw-dynamic package ABI: 82ed1529b30d7fea6594e9d293134874c081179804457a459f6d556f9d1049ff
+Installing 10/12 dirent:x64-mingw-dynamic@1.26...
+Elapsed time to handle dirent:x64-mingw-dynamic: 5.35 ms
+dirent:x64-mingw-dynamic package ABI: ea2fbaaca6c9499d9303defc2bdd4de32e654a9a85190af6593ed130ae8620a5
+Installing 11/12 cgltf:x64-mingw-dynamic@1.14...
+Elapsed time to handle cgltf:x64-mingw-dynamic: 6.99 ms
+cgltf:x64-mingw-dynamic package ABI: e398947e45c8bfa7c920f1d287f86f613364f67109d7878926d9c414573d4094
+Installing 12/12 raylib[core,use-audio]:x64-mingw-dynamic@5.5...
+Elapsed time to handle raylib:x64-mingw-dynamic: 17.5 ms
+raylib:x64-mingw-dynamic package ABI: b5ce4613721785f3d19f40f7256637a1390f025e656b9f1e8d57f7d955dbb061
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(MIT OR CC-PDDC)
+(Unlicense OR MIT-0)
+MIT
+Zlib
 raylib provides CMake targets:
 
   # this is heuristically generated, and may not be correct
@@ -26,4 +71,4 @@ raylib provides pkg-config modules:
   # A simple and easy-to-use library to enjoy videogames programming
   raylib
 
-All requested installations completed successfully in: 396 us
+All requested installations completed successfully in: 124 ms

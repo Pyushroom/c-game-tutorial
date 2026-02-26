@@ -1,5 +1,4 @@
 # ninja log v7
-6	146	7938060495438184	CMakeFiles/cpp_game.dir/src/main.cpp.obj	8191f29742638438
-146	970	7938060496773388	cpp_game.exe	138a1e9fc4775232
-3	4257	7938217311857320	build.ninja	df19cf008e82d106
-3	4257	7938217311837646	E:/c++ codes/c++ game project/build-release/cmake_install.cmake	df19cf008e82d106
+2	93	7938352782263494	CMakeFiles/cpp_game.dir/src/main.cpp.obj	8191f29742638438
+8	102	7938352782428056	CMakeFiles/cpp_game.dir/src/Spaceship.cpp.obj	e17b2cae91d156ab
+102	976	7938352783371957	cpp_game.exe	85d33e8598a94c09

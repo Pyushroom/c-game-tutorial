@@ -3,16 +3,15 @@
 Mały projekt C++ korzystający z **raylib**.  
 Zależności są zarządzane przez **vcpkg** w trybie **manifest** (`vcpkg.json`).
 
+Projekt używa **CMake Presets**, więc budowanie jest uproszczone.
+
+---
+
 ## Wymagania
 
 - CMake >= 3.20
-- Kompilator C++ obsługujący C++20:
-  - Windows: MSVC / MinGW / clang
-  - Linux/macOS: GCC/Clang
-- **vcpkg** (lokalnie na Twojej maszynie)
-
-> Samo `git clone` nie pobiera bibliotek automatycznie.
-> Biblioteki (raylib) pobiorą się podczas konfiguracji CMake, jeśli użyjesz toolchaina vcpkg.
+- Kompilator obsługujący C++20
+- vcpkg (z ustawioną zmienną środowiskową `VCPKG_ROOT`)
 
 ---
 
@@ -22,3 +21,23 @@ Zależności są zarządzane przez **vcpkg** w trybie **manifest** (`vcpkg.json`
 git clone https://github.com/Pyushroom/c-game-tutorial.git
 cd cpp-game
 ```
+
+2. Budowanie (CMake Presets)
+   Debug
+   cmake --preset debug
+   cmake --build --preset debug
+   Release
+   cmake --preset release
+   cmake --build --preset release
+
+Foldery build tworzą się automatycznie:
+
+build-debug
+
+build-release
+
+3. Uruchamianie
+   Debug
+   .\build-debug\cpp_game.exe
+   Release
+   .\build-release\cpp_game.exe

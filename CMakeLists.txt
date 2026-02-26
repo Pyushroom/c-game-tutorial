@@ -5,15 +5,17 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# raylib from vcpkg (manifest mode via vcpkg.json)
 find_package(raylib CONFIG REQUIRED)
 
-add_executable(cpp_game src/main.cpp)
+add_executable(cpp_game
+    src/main.cpp
+    src/Spaceship.cpp
+    src/game.cpp
+    src/laser.cpp
+)
 
-# Prefer modern imported target
 target_link_libraries(cpp_game PRIVATE raylib)
 
-# --- Warnings / quality flags ---
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(cpp_game PRIVATE
         -Wall
@@ -24,8 +26,6 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
         -Wsign-conversion
         $<$<CONFIG:Debug>:-O0 -g3>
     )
-
-    # Extra runtime checks for libstdc++ (helpful for vectors/strings)
     target_compile_definitions(cpp_game PRIVATE
         $<$<CONFIG:Debug>:_GLIBCXX_ASSERTIONS>
     )
