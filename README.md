@@ -19,6 +19,6 @@ Zależności są zarządzane przez **vcpkg** w trybie **manifest** (`vcpkg.json`
 ## 1) Pobranie repo
 
 ```bash
-git clone <TU_WSTAW_URL_DO_REPO>
+git clone https://github.com/Pyushroom/c-game-tutorial.git
 cd cpp-game
 ```
