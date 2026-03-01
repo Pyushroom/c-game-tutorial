@@ -1,5 +1,7 @@
 #bUILD DIR
 build/
+build*/
+vcpkg_installed/
 out/
 
 #IDE files
