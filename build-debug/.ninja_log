@@ -1,6 +1,0 @@
-# ninja log v5
-1	687	1772390930148792905	CMakeFiles/cpp_game.dir/src/main.cpp.o	be105577f7451372
-1	988	1772390930449792696	CMakeFiles/cpp_game.dir/src/Spaceship.cpp.o	f98ed048d05d8668
-5	1244	1772390930704792519	CMakeFiles/cpp_game.dir/src/laser.cpp.o	2a064f90bbd49339
-3	1466	1772390930927792364	CMakeFiles/cpp_game.dir/src/game.cpp.o	123ca5cae2f1e5e2
-1466	1685	1772390931146792213	cpp_game	4552d8b9f2bf7227
