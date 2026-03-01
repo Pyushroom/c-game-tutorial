@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(raylib CONFIG REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
 
 add_executable(cpp_game
     src/main.cpp
@@ -14,7 +15,10 @@ add_executable(cpp_game
     src/laser.cpp
 )
 
-target_link_libraries(cpp_game PRIVATE raylib)
+target_link_libraries(cpp_game PRIVATE 
+raylib
+glfw
+)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(cpp_game PRIVATE

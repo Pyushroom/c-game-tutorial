@@ -1,13 +1,31 @@
+#bUILD DIR
 build/
 out/
+
+#IDE files
 .vscode/
+
+#Cmake files
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 compile_commands.json
+
+#Ninja files
+.ninja_deps
+.ninja_log
+
+#Binary files
 *.exe
 *.dll
+*.so
+*.a
+*.out
+
+#debug symbols
 *.pdb
+
+#OS generated files
 Thumbs.db
 Desktop.ini
 
