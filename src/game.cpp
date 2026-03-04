@@ -1,7 +1,9 @@
 #include "game.hpp"
 #include <iostream>
 
-game::game() {}
+game::game() {
+    obstacles = createObstacles();
+}
 
 game::~game() {}
 
@@ -18,6 +20,10 @@ void game::Draw() {
 
     for (auto& laser : spaceship.lasers) {
         laser.Draw();
+    }
+
+    for (auto& obstacle : obstacles) {
+        obstacle.Draw();
     }
 }
 
@@ -40,4 +46,18 @@ void game::deleteOffScreenLasers() {
             ++it;
         }
     }
+}
+
+std::vector<Obstacle> game::createObstacles() {
+    int obstacleWidth = Obstacle::grid[0].size() * 3; // each block is 3 pixel wide
+    // Implementation for creating obstacles
+
+    float gap = (GetScreenWidth() - (4 * obstacleWidth)) / 5; // Calculate gap between obstacles
+
+    for (int i = 0; i < 4; i++) {
+        float offsetX = (i + 1) * gap + i * obstacleWidth; // Calculate x position for each obstacle
+        obstacles.push_back(Obstacle(
+            {offsetX, float(GetScreenHeight() - 100)})); // Create obstacle at calculated position
+    }
+    return obstacles;
 }

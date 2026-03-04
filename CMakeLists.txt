@@ -13,6 +13,8 @@ add_executable(cpp_game
     src/Spaceship.cpp
     src/game.cpp
     src/laser.cpp
+    src/Block.cpp
+    src/Obstacle.cpp
 )
 
 target_link_libraries(cpp_game PRIVATE 
