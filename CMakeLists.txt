@@ -15,6 +15,7 @@ add_executable(cpp_game
     src/laser.cpp
     src/Block.cpp
     src/Obstacle.cpp
+    src/Alien.cpp
 )
 
 target_link_libraries(cpp_game PRIVATE 
