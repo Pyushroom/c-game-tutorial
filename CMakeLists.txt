@@ -16,6 +16,7 @@ add_executable(cpp_game
     src/Block.cpp
     src/Obstacle.cpp
     src/Alien.cpp
+    src/MisteryShip.cpp
 )
 
 target_link_libraries(cpp_game PRIVATE 

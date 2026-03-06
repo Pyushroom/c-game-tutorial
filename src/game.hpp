@@ -1,5 +1,6 @@
 #pragma once
 #include "Alien.hpp"
+#include "MisteryShip.hpp"
 #include "Obstacle.hpp"
 #include "Spaceship.hpp"
 
@@ -16,8 +17,11 @@ class game {
     void MoveDownAliens(int distance);
     std::vector<Laser> alienLasers;
     void AlienShoot();
-    constexpr static float alienLaserShootInterval = 0.35; // Time interval between alien shots
-    float timeLastAlienShot; // Time when the last alien shot was fired
+    constexpr static double alienLaserShootInterval = 0.35;
+    double timeLastAlienShot;
+    MisteryShip misteryShip;
+    double misteryShipInterval;
+    double timeLastSpawnMistery;
 
   public:
     game(/* args */);

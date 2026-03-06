@@ -4,8 +4,10 @@
 game::game() {
     obstacles = createObstacles();
     aliens = createAliens();
-    alienDirection = 1; // Start moving right
+    alienDirection = 1;
     timeLastAlienShot = 0.0;
+    timeLastSpawnMistery = GetTime();
+    misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
 }
 
 game::~game() {
@@ -13,6 +15,13 @@ game::~game() {
 }
 
 void game::Update() {
+    double currentTime = GetTime();
+    if (currentTime - timeLastSpawnMistery > misteryShipInterval) {
+        misteryShip.Spawn();
+        timeLastSpawnMistery = currentTime;
+        misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
+    }
+
     for (auto& laser : spaceship.lasers) {
         laser.Update();
     }
@@ -25,8 +34,8 @@ void game::Update() {
     }
 
     deleteOffScreenLasers();
+    misteryShip.Update();
 }
-
 void game::Draw() {
     spaceship.Draw();
 
@@ -45,6 +54,8 @@ void game::Draw() {
     for (auto& laser : alienLasers) {
         laser.Draw();
     }
+
+    misteryShip.Draw();
 }
 
 void game::HandleInput() {
