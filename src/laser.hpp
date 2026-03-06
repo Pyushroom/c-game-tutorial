@@ -14,4 +14,6 @@ class Laser {
     void Update();
 
     bool IsOffScreen;
+
+    Rectangle getRect() const;
 };

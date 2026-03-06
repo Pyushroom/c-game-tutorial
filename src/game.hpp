@@ -22,6 +22,7 @@ class game {
     MisteryShip misteryShip;
     double misteryShipInterval;
     double timeLastSpawnMistery;
+    void checkCollisions();
 
   public:
     game(/* args */);

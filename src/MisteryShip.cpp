@@ -37,3 +37,11 @@ void MisteryShip::Spawn() {
     }
     alive = true;
 }
+
+Rectangle MisteryShip::getRect() const {
+    if (alive) {
+        return {position.x, position.y, float(image.width), float(image.height)};
+    } else {
+        return {position.x, position.y, 0, 0}; // Return an empty rectangle if not alive
+    }
+}

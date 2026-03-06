@@ -13,4 +13,5 @@ class Alien {
     void Update(int direction);
     void Draw();
     int getType();
+    Rectangle getRect() const;
 };

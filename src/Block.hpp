@@ -9,4 +9,5 @@ class Block {
     Block(Vector2 position);
     ~Block();
     void Draw();
+    Rectangle getRect() const;
 };
