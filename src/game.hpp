@@ -6,7 +6,6 @@
 
 class game {
   private:
-    Spaceship spaceship;
     void deleteOffScreenLasers();
     std::vector<Obstacle> obstacles;
     std::vector<Obstacle> createObstacles();
@@ -23,6 +22,9 @@ class game {
     double misteryShipInterval;
     double timeLastSpawnMistery;
     void checkCollisions();
+    void GameOver();
+    void Reset();
+    void InitGame();
 
   public:
     game(/* args */);
@@ -30,4 +32,7 @@ class game {
     void Draw();
     void Update();
     void HandleInput();
+    bool running;
+    int lives;
+    Spaceship spaceship;
 };

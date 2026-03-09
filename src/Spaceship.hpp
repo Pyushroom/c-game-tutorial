@@ -14,6 +14,7 @@ class Spaceship {
     void FireLaser();
     std::vector<Laser> lasers; // holding all laser objects fired by the spaceship
     Rectangle getRect() const;
+    void Reset();
 
   private:
     Texture2D image;

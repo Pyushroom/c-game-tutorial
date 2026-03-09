@@ -17,7 +17,7 @@ void Laser::Draw() {
 
 void Laser::Update() {
     position.y += speed;
-    if (!IsOffScreen && (position.y < 0 || position.y > GetScreenHeight())) {
+    if (!IsOffScreen && (position.y < 15 || position.y > GetScreenHeight() - 100)) {
         IsOffScreen = true;
         // std::cout << "Laser went off screen!" << std::endl;
     }

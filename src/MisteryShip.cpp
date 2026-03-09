@@ -12,7 +12,7 @@ MisteryShip::~MisteryShip() {
 void MisteryShip::Update() {
     if (alive) {
         position.x += speed;
-        if (position.x > GetScreenWidth() - image.width || position.x < 0) {
+        if (position.x > GetScreenWidth() - image.width - 15 || position.x < 15) {
             alive = false; // Deactivate if it goes off-screen
         }
     }
@@ -32,8 +32,8 @@ void MisteryShip::Spawn() {
         position.x = -image.width; // Spawn from the left
         speed = 3;                 // Move right
     } else {
-        position.x = GetScreenWidth() - image.width; // Spawn from the right
-        speed = -3;                                  // Move left
+        position.x = GetScreenWidth() - image.width - 15; // Spawn from the right
+        speed = -3;                                       // Move left
     }
     alive = true;
 }
