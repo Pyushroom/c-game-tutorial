@@ -35,4 +35,5 @@ class game {
     bool running;
     int lives;
     Spaceship spaceship;
+    int score;
 };

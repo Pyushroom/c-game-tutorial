@@ -42,6 +42,8 @@ int main() {
             DrawTextureV(image, {15 + i * (image.width + 10), H - 2}, WHITE);
         }
 
+        DrawTextEx(font, TextFormat("Score: %d", game.score), {15, 15}, 32, 2, yellow);
+
         EndDrawing();
     }
 

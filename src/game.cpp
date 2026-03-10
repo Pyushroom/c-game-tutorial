@@ -175,6 +175,13 @@ void game::checkCollisions() {
         auto alienIt = aliens.begin();
         while (alienIt != aliens.end()) {
             if (CheckCollisionRecs(alienIt->getRect(), laser.getRect())) {
+                if (alienIt->type == 1) {
+                    score += 100;
+                } else if (alienIt->type == 2) {
+                    score += 200;
+                } else if (alienIt->type == 3) {
+                    score += 300;
+                }
                 alienIt = aliens.erase(alienIt);
                 laser.IsOffScreen = true;
                 break;
@@ -205,6 +212,7 @@ void game::checkCollisions() {
         }
 
         if (CheckCollisionRecs(misteryShip.getRect(), laser.getRect())) {
+            score += 500;
             misteryShip.alive = false;
             laser.IsOffScreen = true;
         }
@@ -287,4 +295,5 @@ void game::InitGame() {
     misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
     lives = 3;      // Initialize lives
     running = true; // Initialize running state
+    score = 0;      // Initialize score
 }
