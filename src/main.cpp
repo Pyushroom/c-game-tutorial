@@ -34,8 +34,9 @@ int main() {
         if (game.running) {
             DrawTextEx(font, "Level 1", {W - 100, H - 2}, 32, 2, yellow);
         } else {
-            DrawTextEx(font, "Game Over! Press Enter to Restart", {W / 2 - 200, H / 2 - 20}, 34, 3,
-                       yellow);
+            DrawTextEx(font, "Game Over! Press Enter to Restart", {100, H / 2}, 34, 3, yellow);
+            DrawTextEx(font, TextFormat("High Score: %d", game.highScore),
+                       {W / 2 - 200, H / 2 + 100}, 34, 3, yellow);
         }
 
         for (int i = 0; i < game.lives; i++) {

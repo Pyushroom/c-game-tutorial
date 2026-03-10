@@ -25,6 +25,9 @@ class game {
     void GameOver();
     void Reset();
     void InitGame();
+    void checkForHighScore();
+    void saveHighScore(int newHighScore);
+    int loadHighScore();
 
   public:
     game(/* args */);
@@ -36,4 +39,5 @@ class game {
     int lives;
     Spaceship spaceship;
     int score;
+    int highScore;
 };

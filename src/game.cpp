@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include <fstream>
 #include <iostream>
 
 game::game() {
@@ -276,7 +277,8 @@ void game::checkCollisions() {
 
 void game::GameOver() {
     std::cout << "Game Over! Final Score: " << (55 - aliens.size()) * 10 << std::endl;
-    running = false; // Set running to false to exit the game loop
+    running = false;     // Set running to false to exit the game loop
+    checkForHighScore(); // Check if the current score is a new high score
 }
 
 void game::Reset() {
@@ -293,7 +295,38 @@ void game::InitGame() {
     timeLastAlienShot = 0.0;
     timeLastSpawnMistery = GetTime();
     misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
-    lives = 3;      // Initialize lives
-    running = true; // Initialize running state
-    score = 0;      // Initialize score
+    lives = 3;                   // Initialize lives
+    running = true;              // Initialize running state
+    score = 0;                   // Initialize score
+    highScore = loadHighScore(); // Initialize high score
+}
+
+void game::checkForHighScore() {
+    if (score > highScore) {
+        highScore = score;
+        std::cout << "New High Score: " << highScore << std::endl;
+        saveHighScore(highScore);
+    }
+}
+
+void game::saveHighScore(int newHighScore) {
+    std::ofstream outFile("highscore.txt");
+    if (outFile.is_open()) {
+        outFile << newHighScore;
+        outFile.close();
+    } else {
+        std::cerr << "Unable to open highscore file for writing." << std::endl;
+    }
+}
+
+int game::loadHighScore() {
+    std::ifstream inFile("highscore.txt");
+    int loadedHighScore = 0;
+    if (inFile.is_open()) {
+        inFile >> loadedHighScore;
+        inFile.close();
+    } else {
+        std::cerr << "Unable to open highscore file for reading." << std::endl;
+    }
+    return loadedHighScore;
 }
