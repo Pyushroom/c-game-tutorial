@@ -21,4 +21,5 @@ class Spaceship {
     Vector2 position;
     int speed;
     double lastFireTime;
+    Sound laserSound;
 };

@@ -28,6 +28,7 @@ class game {
     void checkForHighScore();
     void saveHighScore(int newHighScore);
     int loadHighScore();
+    Sound explosionSound;
 
   public:
     game(/* args */);
@@ -40,4 +41,5 @@ class game {
     Spaceship spaceship;
     int score;
     int highScore;
+    Music backgroundMusic;
 };

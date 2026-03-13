@@ -4,11 +4,16 @@
 
 game::game() {
 
+    backgroundMusic = LoadMusicStream("assets/Sounds/music.ogg");
+    explosionSound = LoadSound("assets/Sounds/explosion.ogg");
+    PlayMusicStream(backgroundMusic);
     InitGame();
 }
 
 game::~game() {
     Alien::UnloadImages();
+    UnloadMusicStream(backgroundMusic);
+    UnloadSound(explosionSound);
 }
 
 void game::Update() {
@@ -176,6 +181,7 @@ void game::checkCollisions() {
         auto alienIt = aliens.begin();
         while (alienIt != aliens.end()) {
             if (CheckCollisionRecs(alienIt->getRect(), laser.getRect())) {
+                PlaySound(explosionSound);
                 if (alienIt->type == 1) {
                     score += 100;
                 } else if (alienIt->type == 2) {
@@ -216,6 +222,7 @@ void game::checkCollisions() {
             score += 500;
             misteryShip.alive = false;
             laser.IsOffScreen = true;
+            PlaySound(explosionSound);
         }
     }
 
@@ -230,6 +237,7 @@ void game::checkCollisions() {
             lives--;
             std::cout << "Spaceship hit! Lives remaining: " << lives << std::endl;
             laser.IsOffScreen = true; // Mark laser for removal
+            PlaySound(explosionSound);
             if (lives <= 0) {
                 std::cout << "Game Over!" << std::endl;
                 GameOver();

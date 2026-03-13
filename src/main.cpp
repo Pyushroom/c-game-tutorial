@@ -10,6 +10,7 @@ int main() {
     const int H = 600;
 
     InitWindow(W + offset, H + 2 * offset, "raylib tutorial");
+    InitAudioDevice(); // for music in game
 
     Font font = LoadFontEx("assets/Font/monogram.ttf", 64, 0, 0);
 
@@ -20,6 +21,8 @@ int main() {
     game game;
 
     while (!WindowShouldClose()) {
+
+        UpdateMusicStream(game.backgroundMusic); // Update music stream (keep playing)
 
         game.HandleInput();
         game.Update();
@@ -49,5 +52,6 @@ int main() {
     }
 
     CloseWindow();
+    CloseAudioDevice();
     return 0;
 }
