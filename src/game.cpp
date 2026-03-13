@@ -10,6 +10,7 @@ game::game() {
     highScore = loadHighScore();
     state = GameState::MENU;
     running = false;
+    paused = false;
     score = 0;
     lives = 3;
 }
@@ -26,7 +27,11 @@ void game::Update() {
         return;
     }
 
-    if (state == GameState::PLAYING) {
+    if (running) {
+        if (paused) {
+            return;
+        }
+
         double currentTime = GetTime();
         if (currentTime - timeLastSpawnMistery > misteryShipInterval) {
             misteryShip.Spawn();
@@ -47,8 +52,9 @@ void game::Update() {
 
         deleteOffScreenLasers();
         misteryShip.Update();
+
         checkCollisions();
-    } else if (state == GameState::GAME_OVER) {
+    } else {
         if (IsKeyPressed(KEY_ENTER)) {
             Reset();
             InitGame();
@@ -91,16 +97,24 @@ void game::Draw(Font font) {
 }
 
 void game::HandleInput() {
-    if (state != GameState::PLAYING) {
-        return;
+    if (running && IsKeyPressed(KEY_P)) {
+        paused = !paused;
+
+        if (paused) {
+            PauseMusicStream(backgroundMusic);
+        } else {
+            ResumeMusicStream(backgroundMusic);
+        }
     }
 
-    if (IsKeyDown(KEY_LEFT)) {
-        spaceship.MoveLeft();
-    } else if (IsKeyDown(KEY_RIGHT)) {
-        spaceship.MoveRight();
-    } else if (IsKeyPressed(KEY_SPACE)) {
-        spaceship.FireLaser();
+    if (running && !paused) {
+        if (IsKeyDown(KEY_LEFT)) {
+            spaceship.MoveLeft();
+        } else if (IsKeyDown(KEY_RIGHT)) {
+            spaceship.MoveRight();
+        } else if (IsKeyPressed(KEY_SPACE)) {
+            spaceship.FireLaser();
+        }
     }
 }
 
@@ -372,6 +386,7 @@ void game::InitGame() {
     misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
     lives = 3;
     running = true;
+    paused = false;
     score = 0;
 }
 

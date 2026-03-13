@@ -32,6 +32,11 @@ int main() {
 
         game.Draw(font);
 
+        if (game.paused) {
+            DrawTextEx(font, "PAUSED", {320, 300}, 50, 4, yellow);
+            DrawTextEx(font, "Press P to Resume", {260, 360}, 30, 2, yellow);
+        }
+
         if (game.state == GameState::PLAYING) {
             DrawTextEx(font, "Level 1", {W - 100, H - 2}, 32, 2, yellow);
 

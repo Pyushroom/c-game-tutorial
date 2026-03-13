@@ -43,6 +43,7 @@ class game {
     void HandleMenuInput();
 
     bool running;
+    bool paused;
     int lives;
     Spaceship spaceship;
     int score;
