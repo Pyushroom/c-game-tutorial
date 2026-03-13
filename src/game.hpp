@@ -4,6 +4,8 @@
 #include "Obstacle.hpp"
 #include "Spaceship.hpp"
 
+enum class GameState { MENU, PLAYING, GAME_OVER };
+
 class game {
   private:
     void deleteOffScreenLasers();
@@ -31,15 +33,20 @@ class game {
     Sound explosionSound;
 
   public:
-    game(/* args */);
+    game();
     ~game();
-    void Draw();
+
+    void Draw(Font font);
     void Update();
     void HandleInput();
+    void DrawMenu(Font font);
+    void HandleMenuInput();
+
     bool running;
     int lives;
     Spaceship spaceship;
     int score;
     int highScore;
     Music backgroundMusic;
+    GameState state;
 };

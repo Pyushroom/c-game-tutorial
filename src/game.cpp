@@ -3,11 +3,15 @@
 #include <iostream>
 
 game::game() {
-
     backgroundMusic = LoadMusicStream("assets/Sounds/music.ogg");
     explosionSound = LoadSound("assets/Sounds/explosion.ogg");
     PlayMusicStream(backgroundMusic);
-    InitGame();
+
+    highScore = loadHighScore();
+    state = GameState::MENU;
+    running = false;
+    score = 0;
+    lives = 3;
 }
 
 game::~game() {
@@ -17,14 +21,17 @@ game::~game() {
 }
 
 void game::Update() {
-    if (running) {
+    if (state == GameState::MENU) {
+        HandleMenuInput();
+        return;
+    }
 
+    if (state == GameState::PLAYING) {
         double currentTime = GetTime();
         if (currentTime - timeLastSpawnMistery > misteryShipInterval) {
             misteryShip.Spawn();
             timeLastSpawnMistery = currentTime;
-            misteryShipInterval =
-                static_cast<double>(GetRandomValue(10, 20)); // Randomize next spawn interval
+            misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
         }
 
         for (auto& laser : spaceship.lasers) {
@@ -40,16 +47,22 @@ void game::Update() {
 
         deleteOffScreenLasers();
         misteryShip.Update();
-
         checkCollisions();
-    } else {
-        if (IsKeyDown(KEY_ENTER)) {
+    } else if (state == GameState::GAME_OVER) {
+        if (IsKeyPressed(KEY_ENTER)) {
             Reset();
             InitGame();
+            state = GameState::PLAYING;
         }
     }
 }
-void game::Draw() {
+
+void game::Draw(Font font) {
+    if (state == GameState::MENU) {
+        DrawMenu(font);
+        return;
+    }
+
     spaceship.Draw();
 
     for (auto& laser : spaceship.lasers) {
@@ -69,16 +82,69 @@ void game::Draw() {
     }
 
     misteryShip.Draw();
+
+    if (state == GameState::GAME_OVER) {
+        Color yellow = {243, 216, 63, 255};
+        DrawTextEx(font, "Game Over! Press Enter to Restart", {100, 300}, 34, 3, yellow);
+        DrawTextEx(font, TextFormat("High Score: %d", highScore), {200, 400}, 34, 3, yellow);
+    }
 }
 
 void game::HandleInput() {
-    if (running) {
-        if (IsKeyDown(KEY_LEFT)) {
-            spaceship.MoveLeft();
-        } else if (IsKeyDown(KEY_RIGHT)) {
-            spaceship.MoveRight();
-        } else if (IsKeyPressed(KEY_SPACE)) {
-            spaceship.FireLaser();
+    if (state != GameState::PLAYING) {
+        return;
+    }
+
+    if (IsKeyDown(KEY_LEFT)) {
+        spaceship.MoveLeft();
+    } else if (IsKeyDown(KEY_RIGHT)) {
+        spaceship.MoveRight();
+    } else if (IsKeyPressed(KEY_SPACE)) {
+        spaceship.FireLaser();
+    }
+}
+
+void game::DrawMenu(Font font) {
+    Color yellow = {243, 216, 63, 255};
+    Color darkGrey = {40, 40, 40, 255};
+    Color lightGrey = {70, 70, 70, 255};
+
+    Rectangle startButton = {300, 250, 200, 60};
+    Rectangle exitButton = {300, 340, 200, 60};
+
+    Vector2 mousePoint = GetMousePosition();
+
+    bool startHover = CheckCollisionPointRec(mousePoint, startButton);
+    bool exitHover = CheckCollisionPointRec(mousePoint, exitButton);
+
+    DrawTextEx(font, "SPACE INVADERS", {220, 120}, 50, 2, yellow);
+
+    DrawRectangleRounded(startButton, 0.3f, 10, startHover ? lightGrey : darkGrey);
+    DrawRectangleRoundedLines(startButton, 0.3f, 10, yellow);
+    DrawTextEx(font, "START", {355, 268}, 30, 2, yellow);
+
+    DrawRectangleRounded(exitButton, 0.3f, 10, exitHover ? lightGrey : darkGrey);
+    DrawRectangleRoundedLines(exitButton, 0.3f, 10, yellow);
+    DrawTextEx(font, "EXIT", {365, 358}, 30, 2, yellow);
+
+    DrawTextEx(font, TextFormat("High Score: %d", highScore), {280, 450}, 30, 2, yellow);
+}
+
+void game::HandleMenuInput() {
+    Vector2 mousePoint = GetMousePosition();
+
+    Rectangle startButton = {300, 250, 200, 60};
+    Rectangle exitButton = {300, 340, 200, 60};
+
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+        if (CheckCollisionPointRec(mousePoint, startButton)) {
+            Reset();
+            InitGame();
+            state = GameState::PLAYING;
+        }
+
+        if (CheckCollisionPointRec(mousePoint, exitButton)) {
+            CloseWindow();
         }
     }
 }
@@ -284,9 +350,10 @@ void game::checkCollisions() {
 }
 
 void game::GameOver() {
-    std::cout << "Game Over! Final Score: " << (55 - aliens.size()) * 10 << std::endl;
-    running = false;     // Set running to false to exit the game loop
-    checkForHighScore(); // Check if the current score is a new high score
+    std::cout << "Game Over! Final Score: " << score << std::endl;
+    running = false;
+    state = GameState::GAME_OVER;
+    checkForHighScore();
 }
 
 void game::Reset() {
@@ -303,10 +370,9 @@ void game::InitGame() {
     timeLastAlienShot = 0.0;
     timeLastSpawnMistery = GetTime();
     misteryShipInterval = static_cast<double>(GetRandomValue(10, 20));
-    lives = 3;                   // Initialize lives
-    running = true;              // Initialize running state
-    score = 0;                   // Initialize score
-    highScore = loadHighScore(); // Initialize high score
+    lives = 3;
+    running = true;
+    score = 0;
 }
 
 void game::checkForHighScore() {

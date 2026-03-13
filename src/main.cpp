@@ -10,10 +10,9 @@ int main() {
     const int H = 600;
 
     InitWindow(W + offset, H + 2 * offset, "raylib tutorial");
-    InitAudioDevice(); // for music in game
+    InitAudioDevice();
 
     Font font = LoadFontEx("assets/Font/monogram.ttf", 64, 0, 0);
-
     Texture2D image = LoadTexture("assets/Graphics/spaceship.png");
 
     SetTargetFPS(60);
@@ -21,8 +20,7 @@ int main() {
     game game;
 
     while (!WindowShouldClose()) {
-
-        UpdateMusicStream(game.backgroundMusic); // Update music stream (keep playing)
+        UpdateMusicStream(game.backgroundMusic);
 
         game.HandleInput();
         game.Update();
@@ -32,25 +30,23 @@ int main() {
         DrawRectangleRoundedLines({10, 10, 830, 680}, 0.18f, 20, yellow);
         DrawLineEx({15, H - 10}, {W - 15, H - 10}, 3, yellow);
 
-        game.Draw();
+        game.Draw(font);
 
-        if (game.running) {
+        if (game.state == GameState::PLAYING) {
             DrawTextEx(font, "Level 1", {W - 100, H - 2}, 32, 2, yellow);
-        } else {
-            DrawTextEx(font, "Game Over! Press Enter to Restart", {100, H / 2}, 34, 3, yellow);
-            DrawTextEx(font, TextFormat("High Score: %d", game.highScore),
-                       {W / 2 - 200, H / 2 + 100}, 34, 3, yellow);
-        }
 
-        for (int i = 0; i < game.lives; i++) {
-            DrawTextureV(image, {15 + i * (image.width + 10), H - 2}, WHITE);
-        }
+            for (int i = 0; i < game.lives; i++) {
+                DrawTextureV(image, {15 + i * (image.width + 10), H - 2}, WHITE);
+            }
 
-        DrawTextEx(font, TextFormat("Score: %d", game.score), {15, 15}, 32, 2, yellow);
+            DrawTextEx(font, TextFormat("Score: %d", game.score), {15, 15}, 32, 2, yellow);
+        }
 
         EndDrawing();
     }
 
+    UnloadTexture(image);
+    UnloadFont(font);
     CloseWindow();
     CloseAudioDevice();
     return 0;
